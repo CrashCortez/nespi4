@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo sed 's/critical/stable/'
-/etc/default/rpi-eeprom-update
+sudo sed -i 's/critical/stable/' /etc/default/rpi-eeprom-update
 sudo apt update
 sudo apt -y full-upgrade
 sudo rpi-eeprom-update -a
